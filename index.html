@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web Components</title>
+        <script defer type="text/javascript" src="components/TodoItem.js"></script>
+        <script defer src="components/ExpandableList.js"></script>
+        <style>
+            h3 {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>1</h3>
+        <todo-item checked>
+            Foo
+            <span slot="description">small text</span>
+        </todo-item>
+
+        <ul is="expandable-list">
+            <li>First</li>
+            <li>Second</li>
+            <ul is="expandable-list">
+                <li>First</li>
+                <li>Second</li>
+            </ul>
+        </ul>
+    </body>
+</html>
