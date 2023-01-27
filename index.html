@@ -20,6 +20,8 @@
             <span slot="description">small text</span>
         </todo-item>
 
+        <!--    'is': The is global attribute allows you to specify that a standard HTML element
+                should behave like a defined custom built-in element  -->
         <ul is="expandable-list">
             <li>First</li>
             <li>Second</li>
@@ -29,4 +31,10 @@
             </ul>
         </ul>
     </body>
+    <script defer type="text/javascript">
+        const todoItem = document.querySelector('todo-item')
+        todoItem.addEventListener('onItemAdded', (e) => {
+            console.log(`>>> ${e.detail}`)
+        })
+    </script>
 </html>

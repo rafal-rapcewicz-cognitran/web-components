@@ -50,7 +50,12 @@ class TodoItem extends HTMLElement {
     }
 
     // after added to DOM
-    connectedCallback() { console.log('>>> connected') }
+    connectedCallback() {
+        // testing output communication
+        setTimeout(() => {
+            this.dispatchEvent(new CustomEvent('onItemAdded', { detail: 'output communication test' }))
+        }, 1000)
+     }
 
     // after removed from DOM
     disconnectedCallback() { console.log('>>> disconnected') }
