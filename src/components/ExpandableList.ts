@@ -14,9 +14,11 @@ class ExpandableList extends HTMLUListElement {
                 cursor: 'pointer'
             })
         this.toggleBtn.innerText = '>'
-        this.toggleBtn.addEventListener('click', () => this.dataset.expanded = !this.isExpanded)
+        this.toggleBtn.addEventListener('click', () => (this.dataset as any).expanded = !this.isExpanded)
         this.appendChild(this.toggleBtn)
     }
+
+    toggleBtn: HTMLButtonElement
 
     static get observedAttributes() {
         return ['data-expanded']
@@ -37,7 +39,7 @@ class ExpandableList extends HTMLUListElement {
         this.toggleBtn.style.transform = transform
         ;[...this.children].forEach(child => {
             if (child !== this.toggleBtn) {
-                child.style.display = this.isExpanded ? '' : 'none'
+                (child as any).style.display = this.isExpanded ? '' : 'none'
             }
         })
     }

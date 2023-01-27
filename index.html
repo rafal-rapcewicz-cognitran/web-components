@@ -4,9 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Web Components</title>
-        <script defer type="text/javascript" src="components/TodoItem.js"></script>
-        <script defer src="components/ExpandableList.js"></script>
+        <script defer type="module" src="ts-built/components/TodoItem.js"></script>
+        <script defer type="module" src="ts-built/components/ExpandableList.js"></script>
         <style>
+            /* Demonstrate that this css h3 rune does not affect todo-item and vice versa  */
             h3 {
                 color: red;
             }

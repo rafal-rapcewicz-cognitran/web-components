@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "preserveConstEnums": true,
+        "outDir": "ts-built",
+        "rootDir": "src",
+        "sourceMap": true,
+        "inlineSources": true,
+        "module": "esNext",
+        "target": "es2017",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+    }
+}
